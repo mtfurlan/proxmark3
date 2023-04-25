@@ -1,3 +1,40 @@
+# TL;DR:
+
+## cards
+gen1 you can identify/write with
+```
+hf 14a info
+hf mf cload
+```
+gen2 sometimes idenfity with `14a info`, but you just have to just write with
+```
+hf mf restore
+```
+
+Mostly, see [doc/magic_cards_notes.md](doc/magic_cards_notes.md)
+
+## building
+### Proxmark3 RDV4.01
+https://www.redteamtools.com/Proxmark3-RDV4.01
+
+```
+PLATFORM=PM3RDV4
+PLATFORM_EXTRAS=BTADDON
+```
+
+### RDV3 easy
+for the RDV3 easy ( https://dangerousthings.com/product/proxmark3-easy/ )
+MCU....... AT91SAM7S512 Rev B
+Memory.... 512 KB ( 60% used )
+
+Makefile.platform should contain
+```
+PLATFORM=PM3GENERIC
+```
+
+
+
+===============================================================================
 # Iceman Fork - Proxmark3
 
 The Proxmark3 is the swiss-army tool of RFID, allowing for interactions with the vast majority of RFID tags on a global scale. Originally built by Jonathan Westhues, the device is now the goto tool for RFID Analysis for the enthusiast. Iceman repository is considered to be the pinnacle of features and functionality, enabling a huge range of extremely useful and convenient commands and LUA scripts to automate chip identification, penetration testing, and programming
